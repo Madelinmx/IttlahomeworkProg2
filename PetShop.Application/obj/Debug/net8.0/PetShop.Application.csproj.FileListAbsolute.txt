@@ -1,0 +1,6 @@
+C:\Users\Madel\OneDrive\Documents\GitHub\itlahomeworkpt2\Pet_Shop - Copy\PetShop.Application\obj\Debug\net8.0\PetShop.Application.csproj.AssemblyReference.cache
+C:\Users\Madel\OneDrive\Documents\GitHub\itlahomeworkpt2\Pet_Shop - Copy\PetShop.Application\obj\Debug\net8.0\PetShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Madel\OneDrive\Documents\GitHub\itlahomeworkpt2\Pet_Shop - Copy\PetShop.Application\obj\Debug\net8.0\PetShop.Application.AssemblyInfoInputs.cache
+C:\Users\Madel\OneDrive\Documents\GitHub\itlahomeworkpt2\Pet_Shop - Copy\PetShop.Application\obj\Debug\net8.0\PetShop.Application.AssemblyInfo.cs
+C:\Users\Madel\OneDrive\Documents\GitHub\itlahomeworkpt2\Pet_Shop - Copy\PetShop.Application\obj\Debug\net8.0\PetShop.Application.csproj.CoreCompileInputs.cache
+C:\Users\Madel\OneDrive\Documents\GitHub\itlahomeworkpt2\Pet_Shop - Copy\PetShop.Application\obj\Debug\net8.0\PetShop.Application.sourcelink.json

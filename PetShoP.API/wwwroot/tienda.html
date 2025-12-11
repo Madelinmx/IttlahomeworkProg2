@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solución Pet Shop - Tienda</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <span class="logo-icon">🐾</span>
+            <span class="logo-text">Solución Pet Shop</span>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Inicio</a>
+            <a href="adopcion.html">Nosotros y Adopción</a>
+            <a href="tienda.html" class="active">Productos</a>
+            <a href="agendar.html">Agendar Servicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.php">Login</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+            ☰
+        </button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="page-header">
+        <div class="container">
+            <h1>Tienda</h1>
+            <p>Encuentra todo lo que tu mascota necesita en un solo lugar.</p>
+        </div>
+    </section>
+
+    <section class="shop-section">
+        <div class="container shop-layout">
+            <!-- FILTROS -->
+            <aside class="shop-filters">
+                <h2>Filtros</h2>
+
+                <div class="filter-group">
+                    <h3>Categoría</h3>
+                    <label>
+                        <input type="checkbox" class="filter-category" value="alimento" checked>
+                        Alimento
+                    </label>
+                    <label>
+                        <input type="checkbox" class="filter-category" value="juguete" checked>
+                        Juguetes
+                    </label>
+                    <label>
+                        <input type="checkbox" class="filter-category" value="accesorio" checked>
+                        Accesorios
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Precio máximo</h3>
+                    <div class="price-range-wrapper">
+                        <input type="range" id="priceRange" min="10" max="150" value="150">
+                        <div class="price-values">
+                            <span>RD$ 10.00</span>
+                            <span id="priceRangeValue">RD$ 150.00</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PRODUCTOS + CARRITO -->
+            <section class="shop-products">
+                <!-- RESUMEN DEL CARRITO -->
+                <div class="cart-summary" id="cartSummary">
+                    <div class="cart-header">
+                        <h2>Carrito</h2>
+                        <span class="cart-badge" id="cartCountBadge">0</span>
+                    </div>
+
+                    <p class="cart-empty" id="cartEmpty">
+                        Tu carrito está vacío. Agrega productos desde la lista de abajo.
+                    </p>
+
+                    <ul class="cart-items" id="cartItemsList">
+                        <!-- Los ítems se generan por JavaScript -->
+                    </ul>
+
+                    <div class="cart-footer">
+                        <p class="cart-total">
+                            Total: <strong>RD$ <span id="cartTotal">0.00</span></strong>
+                        </p>
+                        <button type="button" class="btn btn-secondary btn-full" id="cartClear">
+                            Vaciar carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTOS -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- ALIMENTO -->
+                    <article class="product-card"
+                             data-id="prod1"
+                             data-name="Alimento de dogs con linaza 2.5kg"
+                             data-category="alimento"
+                             data-price="25">
+                        <img src="img/WhatsApp Image 2025-12-08 at 4.45.54 PM.jpeg"
+                             alt="Alimento para perro">
+                        <div class="product-info">
+                            <h3>Alimento de dogs con linaza 2.5kg</h3>
+                            <p class="product-price">RD$ 500.00</p>
+                            <button class="btn btn-primary btn-full add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- JUGUETES GATO -->
+                    <article class="product-card"
+                             data-id="prod2"
+                             data-name="Pack de juguetes para gato"
+                             data-category="juguete"
+                             data-price="25">
+                        <img src="img/WhatsApp Image 2025-12-08 at 4.42.34 PM.jpeg"
+                             alt="Juguetes para gatos">
+                        <div class="product-info">
+                            <h3>Pack de juguetes para gato</h3>
+                            <p class="product-price">RD$ 350.00</p>
+                            <button class="btn btn-primary btn-full add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- CORREA NEGRA -->
+                    <article class="product-card"
+                             data-id="prod3"
+                             data-name="Correa resistente para perro"
+                             data-category="accesorio"
+                             data-price="35">
+                        <img src="img/WhatsApp Image 2025-12-08 at 4.48.05 PM.jpeg"
+                             alt="Correa para perro">
+                        <div class="product-info">
+                            <h3>Correa resistente para perro</h3>
+                            <p class="product-price">RD$ 300.00</p>
+                            <button class="btn btn-primary btn-full add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- COLLAR / OTRA CORREA -->
+                    <article class="product-card"
+                             data-id="prod4"
+                             data-name="Collar ajustable clásico"
+                             data-category="accesorio"
+                             data-price="18">
+                        <img src="img/WhatsApp Image 2025-12-08 at 4.48.35 PM.jpeg"
+                             alt="Collares y correas para perro">
+                        <div class="product-info">
+                            <h3>Collar ajustable clásico</h3>
+                            <p class="product-price">RD$150.00</p>
+                            <button class="btn btn-primary btn-full add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- MÁS JUGUETES -->
+                    <article class="product-card"
+                             data-id="prod5"
+                             data-name="Set de pelotas interactivas"
+                             data-category="juguete"
+                             data-price="15">
+                        <img src="img/WhatsApp Image 2025-12-08 at 4.44.17 PM.jpeg"
+                             alt="Juguetes variados para mascotas">
+                        <div class="product-info">
+                            <h3>Set de pelotas interactivas</h3>
+                            <p class="product-price">RD$ 200.00</p>
+                            <button class="btn btn-primary btn-full add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- ARNÉS -->
+                    <article class="product-card"
+                             data-id="prod6"
+                             data-name="Arnés de paseo acolchado"
+                             data-category="accesorio"
+                             data-price="28">
+                        <img src="img/WhatsApp Image 2025-12-08 at 4.48.35 PM.jpeg"
+                             alt="Arnés y correas para paseo">
+                        <div class="product-info">
+                            <h3>Arnés de paseo acolchado</h3>
+                            <p class="product-price">RD$ 100.00</p>
+                            <button class="btn btn-primary btn-full add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div>
+            <h4>Contacto</h4>
+            <ul>
+                <li>📍 503 Mascotas Ave, Ciudad Pet</li>
+                <li>📞 (809) 555-1234</li>
+                <li>✉️ info@solucionpetshop.com</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Tienda</h4>
+            <ul>
+                <li><a href="tienda.html">Productos</a></li>
+                <li><a href="agendar.html">Servicios</a></li>
+                <li><a href="adopcion.html">Adopciones</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Redes Sociales</h4>
+            <div class="social-icons">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Solución Pet Shop. Todos los derechos reservados.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

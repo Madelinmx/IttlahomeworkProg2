@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solución Pet Shop - Agendar Servicio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <span class="logo-icon">🐾</span>
+            <span class="logo-text">Solución Pet Shop</span>
+        </div>
+<nav class="main-nav" id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="adopcion.html">Nosotros y Adopción</a>
+    <a href="tienda.html">Productos</a>
+    <a href="agendar.html" class="active">Agendar Servicio</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.php">Login</a>
+    
+</nav>
+
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+            ☰
+        </button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="page-header">
+        <div class="container">
+            <h1>Agendar Servicio</h1>
+            <p>Reserva tu cita para grooming, veterinaria o entrenamiento de forma rápida.</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container booking-layout">
+
+            <!-- FORMULARIO DE CITA -->
+            <form class="booking-card" id="bookingForm" method="post" action="procesar_cita.php">
+                <h2>Reserva tu Cita</h2>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="servicio">Seleccionar Servicio</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona...</option>
+                            <option value="Grooming">Grooming</option>
+                            <option value="Veterinaria">Veterinaria</option>
+                            <option value="Entrenamiento">Entrenamiento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipoMascota">Tipo de Mascota</label>
+                        <select id="tipoMascota" name="tipoMascota" required>
+                            <option value="">Selecciona...</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Conejo">Conejo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hora</label>
+                        <div class="time-grid" id="timeGrid">
+                            <button type="button" class="time-slot">09:00 AM</button>
+                            <button type="button" class="time-slot">10:00 AM</button>
+                            <button type="button" class="time-slot">11:00 AM</button>
+                            <button type="button" class="time-slot">2:00 PM</button>
+                            <button type="button" class="time-slot">3:00 PM</button>
+                            <button type="button" class="time-slot">4:00 PM</button>
+                        </div>
+                        <input type="hidden" id="horaSeleccionada" name="horaSeleccionada">
+                    </div>
+                </div>
+
+                <hr class="form-divider">
+
+                <h3>Datos del Cliente</h3>
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Número de Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="809-000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notas">Notas adicionales</label>
+                        <textarea id="notas" name="notas" rows="3" placeholder="Información de la mascota, preferencias, etc."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    Confirmar Reserva
+                </button>
+            </form>
+
+            <!-- INFO + IMAGEN (perrito pequeño) -->
+            <aside class="booking-info">
+                <h2>Horarios y Servicios</h2>
+
+                <img src="img/WhatsApp Image 2025-12-010 at 4.40.24 PM.jpeg"
+                     alt="Perrito pequeño en Solución Pet Shop"
+                     style="border-radius:16px;margin-bottom:1rem;max-height:230px;object-fit:cover;width:100%;">
+
+                <p><strong>Horario de atención:</strong></p>
+                <ul>
+                    <li>Lunes a Viernes: 8:00 am - 11:00 pm</li>
+                    <li>Sábado: 9:00 am - 8:00 pm</li>
+                    <li>Domingo: 10:00 am - 6:00 pm</li>
+                </ul>
+
+                <p><strong>Servicios disponibles:</strong></p>
+                <ul>
+                    <li>Baño y corte de pelo</li>
+                    <li>Consulta veterinaria general</li>
+                    <li>Vacunas y desparasitación</li>
+                    <li>Entrenamiento básico y avanzado</li>
+                </ul>
+
+                <p>
+                    Después de enviar tu reserva, verás una pantalla de confirmación
+                    y recibirás un correo con los detalles de tu cita (si el servidor de correo está configurado).
+                </p>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div>
+            <h4>Contacto</h4>
+            <ul>
+                <li>📍 503 Mascotas Ave, Ciudad Pet</li>
+                <li>📞 (809) 555-1234</li>
+                <li>✉️ info@solucionpetshop.com</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Tienda</h4>
+            <ul>
+                <li><a href="tienda.html">Productos</a></li>
+                <li><a href="agendar.html">Servicios</a></li>
+                <li><a href="adopcion.html">Adopciones</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Redes Sociales</h4>
+            <div class="social-icons">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Solución Pet Shop. Todos los derechos reservados.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
